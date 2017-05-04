@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comic</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<style>
+
+	body {
+		background: #f0f0f0;
+		/*background-image: url("img/1.png");*/
+		font-family: 'PT Sans', sans-serif;
+
+	}
+
+	header {
+		text-align: center;
+		margin: 20px;
+	}
+
+	footer {
+		text-align: center;
+		margin: 20px;
+	}
+
+	h1 {
+		font-size: 48px;
+		margin: 0;
+		font-family: 'Nixie One', sans-serif;
+	}
+
+	#panels img {
+		/*max-width: 300px;*/
+		/*border: 1px solid black;*/
+
+		width: 100% !important;
+  		height: auto !important;
+
+	}
+
+	#panels {
+		
+
+		 /* Prevent vertical gaps */
+		  /*line-height: 0;*/
+
+		  /*margin-top: 30px;*/
+		   
+		  -webkit-column-count: 3;
+		  -webkit-column-gap:   0px;
+		  -moz-column-count:    3;
+		  -moz-column-gap:      0px;
+		  column-count:         3;
+		  column-gap:           0px;  
+	}
+
+	.page {
+		width: 1000px;
+		margin: auto;
+		margin-top: 20px;
+		background: white;
+		padding: 20px;
+		/*border-bottom: 2px solid #bbb;*/
+		text-align: center;
+		position: relative;
+
+
+	}
+
+	.page,
+.page::before,
+.page::after {
+  /* Styles to distinguish sheets from one another */
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #d5d5d5;
+  border-top: 1px solid #eee;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  height: 98%;
+  width: 99%;
+  background-color: #fdfdfd;
+}
+
+.page::before {
+  right: 15px;
+  top: 5;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.page::after {
+  top: 10px;
+  right: -5px;
+  transform: rotate(2deg);
+  z-index: -2;
+}
+
+p {
+	font-size: 110%;
+	text-align: justify;
+	margin: 10px 40px;
+}
+
+#box {
+	height: 40px;
+	width: 50px;
+	background: #f6b;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 5px;
+	border-bottom: 10px solid #e5a;
+	box-shadow: 0px 1px 1px rgba(30,0,0,0.7);
+	vertical-align: bottom;
+	line-height: 40px;    
+	display: inline-block;
+	/*border-top: 1px solid #eed;*/
+}
+
+#box:active {
+	border-bottom: none;
+}
+</style>
+</head>
+<body>
+<header>
+	
+	<h1>cookyroach</h1>
+<!-- 	</br>
+	<img src="img/twitter.png" width="50px;"> -->
+
+	<div id="box">A</div>
+	<div id="box">B</div>
+	<div id="box">C</div>
+</header>
+	
+<article class="page">
+	
+
+
+
+<section id="panels">
+
+<p>This is some text. You like reading text. It feels very good for you.</p>
+<p>There is more to this story than you might think at first. It all started one day in March 17 years ago.
+I will never forget that day.</p>
+	
+	<img src="img/b1.png">
+  <img src="img/baniwalk.png">
+  <img src="img/lure.png">
+  <img src="img/lures2.png">
+
+  <img src="img/ban33.png">
+  <p>At the departure, he told me:</p>
+ 		<p>- Never give up those onions. Never give up.</p>
+ 		<p>I smiled. He turned around and walked away. I knew that this would be the last time I saw him.</p>
+  <img src="img/box.png">
+<img src="img/tone.png">
+
+ 	
+  <img src="img/paneltest.jpg">
+  <img src="img/b2.png">
+  <img src="img/rii2.png">
+</section>
+
+</article>
+
+<footer>
+	2017
+</footer>
+
+</body>
+</html>
