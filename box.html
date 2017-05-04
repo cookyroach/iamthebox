@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I am the box</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	<style>
+
+		body {
+			background: #e0e0e0;
+			text-align: center;
+			font-family: 'Roboto Mono', monospace;
+		}
+
+		#container {
+			width: 200px;
+			height: 200px;
+			position: relative;
+			perspective: 1000px;
+			margin: auto;
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+
+		#cube {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transform-style: preserve-3d;
+			transform: translateZ(-98px);
+		}
+
+
+		#cube figure {
+			margin: 0;
+			width: 196px;
+			height: 196px;
+			display: block;
+			position: absolute;
+			text-align: center;
+			/*border: 2px solid black;*/
+			/*opacity: 0.5;*/
+		}
+
+		#cube .front {
+			transform: rotateY(0deg) translateZ(98px);
+			background: white;
+		}
+		#cube .back {
+			transform: rotateX(180deg) translateZ(98px);
+			background: white;
+		}
+		#cube .right {
+			transform: rotateY(90deg) translateZ(98px);
+			background: #f9f9f9;
+		}
+		#cube .left {
+			transform: rotateY(-90deg) translateZ(98px);
+			background: #f9f9f9;
+		}
+		#cube .top {
+			transform: rotateX(90deg) translateZ(98px);
+			background: white;
+		}
+		#cube .bottom {
+			transform: rotateX(-90deg) translateZ(98px);
+			background: #f0f0f0;
+		}
+
+		.square {
+			
+			background: #333;
+			display: inline-block;
+		}
+
+		#eye {
+			width: 23px;
+			height: 20px;
+			margin: 32px;
+			margin-top: 60px;
+		}
+
+		#mouth {
+			width: 55px;
+			height: 20px;
+			display: block;
+			margin: auto;
+		}
+
+		@keyframes cube_animation {
+			0%{
+				
+				transform: translateZ(-98px) rotateY(0deg) rotateX(20deg);
+			}
+
+			25% {
+				transform: translateZ(-98px) rotateY(50deg) rotateX(30deg);
+			}
+
+			50% {
+				transform: translateZ(-98px) rotateY(0deg) rotateX(20deg);
+			}
+
+			75% {
+				transform: translateZ(-98px) rotateY(-50deg) rotateX(30deg);
+			}
+
+			100% {
+				transform: translateZ(-98px) rotateY(0deg) rotateX(20deg);
+
+			}
+		}
+
+		#cube {
+			-webkit-animation: cube_animation 5.3s cubic-bezier(.43,.2,.36,1) infinite;
+		}
+	</style>
+</head>
+<body>
+
+<section id="container">
+	<div id="cube">
+		<figure class="front">
+			<div class="square" id="eye"></div>
+			<div class="square" id="eye"></div>
+			<div class="square" id="mouth"></div>
+		</figure>
+
+		<figure class="back"></figure>
+		<figure class="right"></figure>
+		<figure class="left"></figure>
+		<figure class="top"></figure>
+		<figure class="bottom"></figure>
+	</div>
+</section>
+
+<p>I am the Box</p>
+
+</body>
+</html>
